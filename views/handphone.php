@@ -46,7 +46,7 @@
         <div class="br-pagebody">
             <div class="br-section-wrapper">
                 <h6 class="br-section-label">Data Handphone</h6>
-                <a href="tambah_handphone.php" class="btn btn-primary">Tambah Handphone</a>
+                <a href="tambah_handphone.php" class="btn btn-primary mb-2">Tambah Handphone</a>
 
                 <div class="table-wrapper">
                     <table id="datatable1" class="table display responsive nowrap">
