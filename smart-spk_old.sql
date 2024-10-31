@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 31, 2024 at 09:25 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.1.17
+-- Host: 127.0.0.1
+-- Generation Time: Oct 31, 2024 at 07:12 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,7 @@ CREATE TABLE `detail_hasil` (
   `nama_handphone` varchar(255) NOT NULL,
   `nilai_akhir` float NOT NULL,
   `ranking` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `detail_hasil`
@@ -93,7 +93,7 @@ CREATE TABLE `handphone` (
   `c5` int(11) NOT NULL,
   `c6` int(11) NOT NULL,
   `c7` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `handphone`
@@ -120,7 +120,7 @@ INSERT INTO `handphone` (`id_handphone`, `nama_handphone`, `c1`, `c2`, `c3`, `c4
 CREATE TABLE `hasil` (
   `id_hasil` int(11) NOT NULL,
   `tanggal` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `hasil`
@@ -144,7 +144,7 @@ CREATE TABLE `kriteria` (
   `id_kriteria` int(11) NOT NULL,
   `nama_kriteria` varchar(255) NOT NULL,
   `bobot_kriteria` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `kriteria`
@@ -158,27 +158,6 @@ INSERT INTO `kriteria` (`id_kriteria`, `nama_kriteria`, `bobot_kriteria`) VALUES
 (5, 'Kamera Belakang', 0.1),
 (6, 'Jaringan', 0.05),
 (7, 'Baterai', 0.05);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `id_users` int(11) NOT NULL,
-  `nama` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `role` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id_users`, `nama`, `email`, `password`, `role`) VALUES
-(1, 'Admin', 'admin@gmail.com', '0192023a7bbd73250516f069df18b500', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -209,12 +188,6 @@ ALTER TABLE `kriteria`
   ADD PRIMARY KEY (`id_kriteria`);
 
 --
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_users`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -241,12 +214,6 @@ ALTER TABLE `hasil`
 --
 ALTER TABLE `kriteria`
   MODIFY `id_kriteria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
