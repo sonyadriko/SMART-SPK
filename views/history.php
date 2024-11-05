@@ -101,10 +101,10 @@
     <script src="../assets/lib/jquery-sparkline/jquery.sparkline.min.js"></script>
     <script src="../assets/lib/echarts/echarts.min.js"></script>
     <script src="../assets/lib/select2/js/select2.full.min.js"></script>
-    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
-    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.dataTables.min.js"></script>
     <script src="../assets/js/ResizeSensor.js"></script>
     <script src="../assets/js/dashboard.js"></script>
     <script>

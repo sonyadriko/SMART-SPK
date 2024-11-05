@@ -3,13 +3,27 @@ include '../config/database.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nama_handphone = $_POST['nama_handphone'];
-    $c1 = $_POST['c1'];
+    // $c1 = $_POST['c1'];
+    $harga = $_POST['c1'];
     $c2 = $_POST['c2'];
     $c3 = $_POST['c3'];
     $c4 = $_POST['c4'];
     $c5 = $_POST['c5'];
     $c6 = $_POST['c6'];
     $c7 = $_POST['c7'];
+
+      // Klasifikasikan harga ke dalam kategori
+    if ($harga < 2000000) {
+        $c1 = 5;
+    } elseif ($harga >= 2000000 && $harga <= 3999000) {
+        $c1 = 4;
+    } elseif ($harga >= 4000000 && $harga <= 5999000) {
+        $c1 = 3;
+    } elseif ($harga >= 6000000 && $harga <= 7999000) {
+        $c1 = 2;
+    } else {
+        $c1 = 1;
+    }
 
     $query = "INSERT INTO handphone (nama_handphone, c1, c2, c3, c4, c5, c6, c7) VALUES ('$nama_handphone', '$c1', '$c2', '$c3', '$c4', '$c5', '$c6', '$c7')";
     
@@ -57,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <input type="text" class="form-control" id="nama_handphone" name="nama_handphone"
                             placeholder="Masukkan nama handphone" required>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="c1">Harga</label>
                         <select class="form-control" id="c1" name="c1" required>
                             <option value="" disabled selected>Select an option</option>
@@ -68,7 +82,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <option value="2">Rp 6.000.000 – Rp 7.999.000</option>
                             <option value="1">> Rp 8.000.000</option>
                         </select>
+                    </div> -->
+                    <div class="form-group">
+                        <label for="c1">Harga</label>
+                        <input type="number" class="form-control" id="c1" name="c1" placeholder="Masukkan harga"
+                            required>
                     </div>
+
                     <div class="form-group">
                         <label for="c2">RAM</label>
                         <select class="form-control" id="c2" name="c2" required>

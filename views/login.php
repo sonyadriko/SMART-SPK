@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,7 +29,7 @@
     <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="author" content="ThemePixels">
 
-    <title>Bracket Plus Responsive Bootstrap 4 Admin Template</title>
+    <title>Login</title>
 
     <!-- vendor css -->
     <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -37,25 +38,27 @@
 
     <!-- Bracket CSS -->
     <link rel="stylesheet" href="../assets/css/bracket.css">
-  </head>
+</head>
 
-  <body>
+<body>
 
     <div class="d-flex align-items-center justify-content-center bg-br-primary ht-100v">
 
-      <div class="login-wrapper wd-300 wd-xs-400 pd-25 pd-xs-40 bg-white rounded shadow-base">
-        <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><span class="tx-normal">[</span> bracket <span class="tx-info">plus</span> <span class="tx-normal">]</span></div>
-        <div class="tx-center mg-b-40">The Admin Template For Perfectionist</div>
-        <form id="loginForm">
-        <div class="form-group">
-          <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
-        </div><!-- form-group -->
-        <div class="form-group">
-          <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password">
-        </div><!-- form-group -->
-        <button type="submit" class="btn btn-info btn-block">Login</button>
-        </form>
-      </div><!-- login-wrapper -->
+        <div class="login-wrapper wd-300 wd-xs-400 pd-25 pd-xs-40 bg-white rounded shadow-base">
+            <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><span class="tx-normal">[</span> SMART <span
+                    class="tx-info">SPK</span> <span class="tx-normal">]</span></div>
+            <div class="tx-center mg-b-40"></div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
+                </div><!-- form-group -->
+                <div class="form-group">
+                    <input type="password" id="password" name="password" class="form-control"
+                        placeholder="Enter your password">
+                </div><!-- form-group -->
+                <button type="submit" class="btn btn-info btn-block">Login</button>
+            </form>
+        </div><!-- login-wrapper -->
     </div><!-- d-flex -->
 
     <script src="../assets/lib/jquery/jquery.min.js"></script>
@@ -99,5 +102,6 @@
     });
     </script>
 
-  </body>
+</body>
+
 </html>

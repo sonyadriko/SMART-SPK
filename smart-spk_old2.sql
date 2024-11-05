@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 05, 2024 at 05:50 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Host: localhost
+-- Generation Time: Oct 31, 2024 at 09:25 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.1.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,7 @@ CREATE TABLE `detail_hasil` (
   `nama_handphone` varchar(255) NOT NULL,
   `nilai_akhir` float NOT NULL,
   `ranking` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `detail_hasil`
@@ -93,7 +93,7 @@ CREATE TABLE `handphone` (
   `c5` int(11) NOT NULL,
   `c6` int(11) NOT NULL,
   `c7` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `handphone`
@@ -120,7 +120,7 @@ INSERT INTO `handphone` (`id_handphone`, `nama_handphone`, `c1`, `c2`, `c3`, `c4
 CREATE TABLE `hasil` (
   `id_hasil` int(11) NOT NULL,
   `tanggal` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `hasil`
@@ -144,7 +144,7 @@ CREATE TABLE `kriteria` (
   `id_kriteria` int(11) NOT NULL,
   `nama_kriteria` varchar(255) NOT NULL,
   `bobot_kriteria` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `kriteria`
@@ -171,15 +171,14 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id_users`, `nama`, `email`, `password`, `role`) VALUES
-(1, 'Admin', 'admin@gmail.com', '0192023a7bbd73250516f069df18b500', 'admin'),
-(2, 'pengguna', 'pengguna@gmail.com', 'e36700ab1f6d10d4147091a93b246819', 'pengguna');
+(1, 'Admin', 'admin@gmail.com', '0192023a7bbd73250516f069df18b500', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -229,7 +228,7 @@ ALTER TABLE `detail_hasil`
 -- AUTO_INCREMENT for table `handphone`
 --
 ALTER TABLE `handphone`
-  MODIFY `id_handphone` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_handphone` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `hasil`
@@ -247,7 +246,7 @@ ALTER TABLE `kriteria`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

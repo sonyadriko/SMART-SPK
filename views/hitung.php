@@ -3,6 +3,11 @@
  $totalData = 0;
 $selected_ids = isset($_GET['id_anggota']) ? $_GET['id_anggota'] : null;
 
+$totalBobotQuery = "SELECT SUM(bobot_kriteria) AS total_bobot FROM kriteria";
+$totalBobotResult = mysqli_query($conn, $totalBobotQuery);
+$totalBobotData = mysqli_fetch_assoc($totalBobotResult);
+$totalBobot = round($totalBobotData['total_bobot'], 2); // Round to 2 decimal places
+
 if ($selected_ids) {
     $query = "SELECT COUNT(*) AS total FROM handphone WHERE id_handphone IN ($selected_ids)";
     $result = mysqli_query($conn, $query);
@@ -42,6 +47,8 @@ $get_data = mysqli_query($conn, "select * from handphone where id_handphone IN (
 
     <?php include 'partials/header.php' ?>
     <div class="br-mainpanel">
+        <?php if ($totalBobot == 1) { ?>
+        <?php if ($totalData > 1) { ?>
         <div class="br-pagetitle">
             <div>
                 <h4>Handphone</h4>
@@ -352,6 +359,20 @@ $get_data = mysqli_query($conn, "select * from handphone where id_handphone IN (
                 </div>
             </div>
         </div>
+        <?php } else { ?>
+        <div class="alert alert-danger d-flex justify-content-between align-items-center" role="alert">
+            <span>Pilih lebih dari satu handphone untuk melakukan perhitungan.</span>
+            <a href="prehitung.php" class="btn btn-primary btn-sm">Kembali</a>
+        </div>
+        <?php } ?>
+        <?php } else { ?>
+        <!-- <div class="br-pagetitle"> -->
+        <div class="alert alert-danger d-flex justify-content-between align-items-center" role="alert">
+            Bobot kriteria harus sama dengan 1.
+            <a href="kriteria.php" class="btn btn-primary btn-sm">Kembali</a>
+        </div>
+        <!-- </div> -->
+        <?php } ?>
         <?php include 'partials/footer.php' ?>
     </div>
 
@@ -369,10 +390,10 @@ $get_data = mysqli_query($conn, "select * from handphone where id_handphone IN (
     <script src="../assets/lib/jquery-sparkline/jquery.sparkline.min.js"></script>
     <script src="../assets/lib/echarts/echarts.min.js"></script>
     <script src="../assets/lib/select2/js/select2.full.min.js"></script>
-    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
-    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.dataTables.min.js"></script>
     <script src="../assets/js/ResizeSensor.js"></script>
     <script src="../assets/js/dashboard.js"></script>
     <!-- Tambahkan pustaka SweetAlert dari CDN -->

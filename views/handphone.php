@@ -176,12 +176,14 @@
                                 <td class="text-truncate"><?php echo $c6 ?></td>
                                 <td class="text-truncate"><?php echo $c7 ?></td>
                                 <td class="text-truncate">
-                                    <a href='ubah_barang.php?GetID=<?php echo $id ?>'
+                                    <a href='ubah_handphone.php?id=<?php echo $id ?>'
                                         style="text-decoration: none; list-style: none;"><input type='submit'
                                             value='Ubah' id='editbtn' class="btn btn-primary btn-user"></a>
-                                    <a href='delete_barang.php?Del=<?php echo $id ?>'
-                                        style="text-decoration: none; list-style: none;"><input type='submit'
-                                            value='Hapus' id='delbtn' class="btn btn-primary btn-user"></a>
+                                    <!-- Mengganti tombol Hapus dengan JavaScript untuk konfirmasi -->
+                                    <a href="#" style="text-decoration: none; list-style: none;"
+                                        onclick="confirmDelete(<?php echo $id; ?>)">
+                                        <input type='submit' value='Hapus' id='delbtn' class="btn btn-danger btn-user">
+                                    </a>
                                 </td>
                             </tr>
                             <?php
@@ -212,12 +214,21 @@
     <script src="../assets/lib/jquery-sparkline/jquery.sparkline.min.js"></script>
     <script src="../assets/lib/echarts/echarts.min.js"></script>
     <script src="../assets/lib/select2/js/select2.full.min.js"></script>
-    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
-    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.dataTables.min.js"></script>
     <script src="../assets/js/ResizeSensor.js"></script>
     <script src="../assets/js/dashboard.js"></script>
+    <script>
+    function confirmDelete(id) {
+        // Tampilkan alert konfirmasi
+        if (confirm("Apakah Anda yakin ingin menghapus handphone ini?")) {
+            // Jika pengguna mengklik "OK", arahkan ke URL untuk menghapus data
+            window.location.href = "delete_handphone.php?Del=" + id;
+        }
+    }
+    </script>
     <script>
     $(function() {
         'use strict';
