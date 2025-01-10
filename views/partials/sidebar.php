@@ -10,13 +10,14 @@
                 <span class="menu-item-label">Dashboard</span>
             </a><!-- br-menu-link -->
         </li><!-- br-menu-item -->
-        <?php if($_SESSION['role'] == 'admin'){?>
         <li class="br-menu-item">
             <a href="kriteria.php" class="br-menu-link">
                 <i class="menu-item-icon icon ion-ios-list-outline tx-24"></i>
                 <span class="menu-item-label">Kriteria</span>
             </a><!-- br-menu-link -->
         </li><!-- br-menu-item -->
+        <?php if($_SESSION['role'] == 'admin'){?>
+
         <li class="br-menu-item">
             <a href="handphone.php" class="br-menu-link">
                 <i class="menu-item-icon icon fas fa-mobile-alt tx-24"></i>

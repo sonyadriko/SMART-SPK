@@ -47,7 +47,7 @@ $get_data = mysqli_query($conn, "select * from handphone where id_handphone IN (
 
     <?php include 'partials/header.php' ?>
     <div class="br-mainpanel">
-       
+        <?php if ($totalBobot == 1) { ?>
         <?php if ($totalData > 1) { ?>
         <div class="br-pagetitle">
             <div>
@@ -331,20 +331,19 @@ $get_data = mysqli_query($conn, "select * from handphone where id_handphone IN (
                     // Tampilkan tabel ranking
                     $rank = 1;
                     foreach ($rankings as $rank_data) {
-                        $nilai_akhir_scaled = $rank_data['nilai_akhir'] * 100;
                         echo "<tr>";
                         echo "<td class='text-truncate'>$rank</td>";
                         echo "<td class='text-truncate'>{$rank_data['nama']}</td>";
-                        echo "<td class='text-truncate'>" . round($rank_data['nilai_akhir'], 3) . "</td>";
-                        // echo "<td class='text-truncate'>" . round($nilai_akhir_scaled, 2) . "</td>";
+                        echo "<td class='text-truncate'>" . round($rank_data['nilai_akhir'], 2) . "</td>";
                         echo "</tr>";
+                        
 
                         $item = [
                             'nama' => $rank_data['nama'],
-                            'nilai_akhir' => $nilai_akhir_scaled,
+                            'nilai_akhir' => $rank_data['nilai_akhir'],
                             'ranking' => $rank,
                         ];
-
+                    
                         $alternatif_nilai_akhir_encoded[] = $item;
                         $rank++;
                     }
@@ -365,6 +364,14 @@ $get_data = mysqli_query($conn, "select * from handphone where id_handphone IN (
             <span>Pilih lebih dari satu handphone untuk melakukan perhitungan.</span>
             <a href="prehitung.php" class="btn btn-primary btn-sm">Kembali</a>
         </div>
+        <?php } ?>
+        <?php } else { ?>
+        <!-- <div class="br-pagetitle"> -->
+        <div class="alert alert-danger d-flex justify-content-between align-items-center" role="alert">
+            Bobot kriteria harus sama dengan 1.
+            <a href="kriteria.php" class="btn btn-primary btn-sm">Kembali</a>
+        </div>
+        <!-- </div> -->
         <?php } ?>
         <?php include 'partials/footer.php' ?>
     </div>
