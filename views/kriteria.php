@@ -19,8 +19,8 @@ $totalBobot = $totalBobotData['total_bobot'];
     <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="../assets/lib/select2/css/select2.min.css" rel="stylesheet">
-    <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <!-- <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="../assets/css/bracket.css">
 </head>
 
@@ -69,12 +69,14 @@ $totalBobot = $totalBobotData['total_bobot'];
                             <?php } ?>
                         </tbody>
                     </table>
-                    <span>Nilai bobot harus berupa angka bulat dalam rentang 1 hingga 100.
+                   
+                </div>
+                <p style="margin-top: 20px;">Nilai bobot harus berupa angka bulat dalam rentang 1 hingga 100.
 Bobot 1 menunjukkan tingkat kepentingan yang paling rendah, sedangkan bobot 100 menunjukkan tingkat kepentingan yang paling tinggi.
 Jika Anda memasukkan nilai di luar rentang tersebut atau format tidak valid, sistem akan meminta Anda untuk mengulang input.
-Silakan masukkan bobot yang sesuai untuk melanjutkan.</span>
-                </div>
+Silakan masukkan bobot yang sesuai untuk melanjutkan.</p>
             </div>
+          
         </div>
         <?php include 'partials/footer.php'; ?>
     </div>
@@ -82,20 +84,22 @@ Silakan masukkan bobot yang sesuai untuk melanjutkan.</span>
     <script src="../assets/lib/jquery/jquery.min.js"></script>
     <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/lib/select2/js/select2.full.min.js"></script>
-    <script src="../assets/lib/datatables.net-dt/js/jquery.dataTables.min.js"></script>
-    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <!-- <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.dataTables.min.js"></script> -->
     <script>
-    $(function() {
-        $('#datatable1').DataTable({
-            responsive: true,
-            language: {
-                searchPlaceholder: 'Search...',
-                sSearch: '',
-                lengthMenu: '_MENU_ items/page',
-            }
-        });
-        $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
-    });
-    </script>
+    // $(function() {
+    //     $('#datatable1').DataTable({
+    //         responsive: true,
+    //         language: {
+    //             searchPlaceholder: 'Search...',
+    //             sSearch: '',
+    //             lengthMenu: '_MENU_ items/page',
+    //         }
+    //     });
+    //     $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
+    // });
+    // </script>
 </body>
 </html>
