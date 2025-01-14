@@ -69,6 +69,10 @@ $totalBobot = $totalBobotData['total_bobot'];
                             <?php } ?>
                         </tbody>
                     </table>
+                    <span>Nilai bobot harus berupa angka bulat dalam rentang 1 hingga 100.
+Bobot 1 menunjukkan tingkat kepentingan yang paling rendah, sedangkan bobot 100 menunjukkan tingkat kepentingan yang paling tinggi.
+Jika Anda memasukkan nilai di luar rentang tersebut atau format tidak valid, sistem akan meminta Anda untuk mengulang input.
+Silakan masukkan bobot yang sesuai untuk melanjutkan.</span>
                 </div>
             </div>
         </div>

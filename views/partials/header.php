@@ -1,6 +1,11 @@
 <!-- ########## START: HEAD PANEL ########## -->
 <?php 
-session_start()
+session_start();
+if (!isset($_SESSION['id_users'])) {
+    // Jika sesi tidak ada, arahkan ke halaman login
+    header("Location: login.php");
+    exit(); // Pastikan untuk menghentikan eksekusi skrip setelah redirect
+}
 ?>
 <div class="br-header">
     <div class="br-header-left">
