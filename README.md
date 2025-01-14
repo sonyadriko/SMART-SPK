@@ -24,9 +24,9 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal A
    git clone https://github.com/username/SMART-SPK.git
    cd SMART-SPK
 2. Import database:
-   -- Buka phpMyAdmin atau tools database Anda.
-   -- Buat database baru, misalnya smart_spk.
-   -- Import file smart_spk.sql yang terdapat di folder database.
+   - Buka phpMyAdmin atau tools database Anda.
+   - Buat database baru, misalnya smart_spk.
+   - Import file smart_spk.sql yang terdapat di folder database.
 3. Konfigurasi database:
     Buka file config/database.php.
     Sesuaikan parameter berikut:
