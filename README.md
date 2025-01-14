@@ -43,11 +43,12 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal A
     ```
 5. Akses aplikasi: Buka browser dan kunjungi http://localhost:8000.
 
-🖼️ Cuplikan Layar
-    Dashboard
-    Hasil Keputusan
+## 🖼️ Cuplikan Layar
+Dashboard
 
-🤝 Kontribusi
+Hasil Keputusan
+
+## 🤝 Kontribusi
 Kami menerima kontribusi untuk pengembangan lebih lanjut! 💡
 1. Fork repository ini.
 2. Buat branch fitur baru: git checkout -b fitur-baru.
